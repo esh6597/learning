@@ -1,0 +1,30 @@
+NOTES FROM COURSE
+
+- whenever possible, avoid the old for loop syntax and use ES6 for...of
+
+- put debugger; before statements but MUST be called after
+  function etc() {
+    debugger;
+    ...code;
+  }
+  etc(value);
+
+    cd exercisedirectory
+    node inspect index.js
+    type c to continue--executes code one line at a time
+    repl to enter REPL shell (Read Evaluate Print Loop)
+    type in variable names or code to evaluate
+    remove statement + manual fx call once done
+
+    can be put inside a for loop and will be called every time; must exit repl to use continue
+
+
+
+==============================================================
+DOC TIPS
+
+- array.reduce((previous, element) => {
+  statement;
+}, initialValue);     creates single value out of array
+
+- array.every((element, index) => {}) tests whether every element passes test fx; boolean result
