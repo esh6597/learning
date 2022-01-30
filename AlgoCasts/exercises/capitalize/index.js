@@ -13,6 +13,20 @@ function capitalize(str) {
 
 module.exports = capitalize;
 
+// 3. ANSWER 2 (BAD)
+// //More logically understandable but slower solution
+// let result = str[0].toUpperCase();
+
+// for (let i = 1; i < str.length; i++) {
+//   if (str[i - 1] === ' ') {
+//     result += str[i].toUpperCase();
+//   } else {
+//     result += str[i];
+//   }
+// }
+
+// return result;
+
 // 2. ANSWER 1
 // const words = [];
 
