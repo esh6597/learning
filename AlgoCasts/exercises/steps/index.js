@@ -17,6 +17,54 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+function steps(n) {
+  for (let row = 0; row < n; row++) {
+    let stair = '';
+
+    for (let column = 0; column < n; column++) {
+      if (column <= row) {
+        stair += '#';
+      } else {
+        stair += ' ';
+      }
+    }
+
+    console.log(stair);
+  }  
+}
 
 module.exports = steps;
+
+// 2. ANSWER 1
+// for (let row = 0; row < n; row++) {
+//   let stair = '';
+
+//   for (let column = 0; column < n; column++) {
+//     if (column <= row) {
+//       stair += '#';
+//     } else {
+//       stair += ' ';
+//     }
+//   }
+
+//   console.log(stair);
+// }  
+
+// 1. WORKING BLIND ATTEMPT
+// let print = [];
+
+//   for (let a = 1; a <= n; a++) {
+
+//     print = [];
+
+//     for (let b = 1; b <= a; b++) {
+//     print.push('#');
+//     }
+
+//     let remainder = n - a;
+//     for (let c = 1; c <= remainder; c++) {
+//       print.push(' ');
+//     }
+
+//     console.log(print.join(''));
+//   }
