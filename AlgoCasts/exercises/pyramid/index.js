@@ -14,6 +14,23 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+function pyramid(n) {
+  //loop 1 to n ROWS
+  for (let row = 1; row <= n; row++) {
+    let print = [];
+    for (let b = 1; b <= (2 * (n - row)); b++) {
+      print.push(' ');
+    }
+    for (let c = 1; c <= ((2 * row) - 1); b++) {
+      print.splice(n - row, '#');
+    }
+
+    console.log(print.join(''));
+  }
+  //for each row:
+  //  add 2(n - ROW) spaces
+  //  in middle, add (2 * ROW) - 1 hashes
+  //  print
+}
 
 module.exports = pyramid;
