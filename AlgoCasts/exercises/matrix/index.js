@@ -16,7 +16,7 @@
 //     [10,  9,  8, 7]]
 
 function matrix(n) {
- 
+
 }
 
 module.exports = matrix;
@@ -133,6 +133,4 @@ module.exports = matrix;
 //   }
 
 //   return results;
-
-// IN PROGRESS ATTEMPT
 
