@@ -7,12 +7,36 @@
 // forms the first ten entries of the fibonacci series.
 // Example:
 //   fib(4) === 3
+// In this fib sequence, n[i] = n[i - 1] + n[i - 2]
 
 function fib(n) {
 
 }
 
 module.exports = fib;
+
+//4. 2ND ANSWER: RECURSIVE - MEMORIZE THIS ONE!
+// Understand that it's influenced by the formula which produces the sequence
+
+// function fib(n) {
+//   if (n < 2) {
+//     return n;
+//   }
+
+//   return fib(n - 1) + fib(n - 2);
+// }
+
+// 3. 1ST ANSWER: ITERATIVE
+// const result = [0, 1];
+
+//   for (let i = 2; i <=n; i++) {
+//     const a = result[i - 1];
+//     const b = result[i - 2];
+
+//     result.push(a + b);
+//   }
+
+//   return result[n];
 
 // 2. BLIND RECURSIVE ATTEMPT
 // function fib(n, step = 1, sum = 1, last = 0) {
