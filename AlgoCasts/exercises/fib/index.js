@@ -9,11 +9,34 @@
 //   fib(4) === 3
 // In this fib sequence, n[i] = n[i - 1] + n[i - 2]
 
-function fib(n) {
+function memoize(fn) {
+  const cache = {};
+  return function(...args) { //...args is ES6 for unknown # of arguments
+    if (cache[args]) {
+      return cache[args];
+    }
 
+    const result = fn.apply(this, args);
+    cache[args] = result;
+
+    return result;
+  }
 }
 
+function fib(n) {
+  if (n < 2) {
+    return n;
+  }
+
+  return fib(n - 1) + fib(n - 2);
+}
+
+fib = memoize(fib);
+
 module.exports = fib;
+
+//5. MEMOIZATION: storing previous calls to reduce runtime
+//  --what interviewers will ask you when you present the recursive solution
 
 //4. 2ND ANSWER: RECURSIVE - MEMORIZE THIS ONE!
 // Understand that it's influenced by the formula which produces the sequence
