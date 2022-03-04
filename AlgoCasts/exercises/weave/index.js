@@ -24,6 +24,40 @@
 
 const Queue = require('./queue');
 
-function weave(sourceOne, sourceTwo) {}
+function weave(sourceOne, sourceTwo) {
+  const q = new Queue();
+
+  while (sourceOne.peek() || sourceTwo.peek()) {
+    if (sourceOne.peek()) {
+      q.add(sourceOne.remove());
+    }
+    if (sourceTwo.peek()) {
+      q.add(sourceTwo.remove());
+    }
+  }
+
+  return q;
+}
 
 module.exports = weave;
+
+// 1. Working Blind Attempt
+// //Define 3 queues
+// const q1 = sourceOne;
+// const q2 = sourceTwo;
+
+// const qFin = new Queue();
+
+//  // This is incorrect since we should be exclusively using methods whenever we can for this problem.
+// while (q1.data.length > 0 && q2.data.length > 0) {
+//   if (q1.peek() !== undefined) {
+//     qFin.add(q1.peek());
+//     q1.remove();
+//   }
+//   if (q2.peek() !== undefined) {
+//     qFin.add(q2.peek());
+//     q2.remove();
+//   }
+// }
+
+// return qFin;
