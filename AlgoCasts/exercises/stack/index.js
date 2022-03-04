@@ -10,6 +10,30 @@
 //   s.pop(); // returns 2
 //   s.pop(); // returns 1
 
-class Stack {}
+// STACK NOTES
+/**
+ *  Code looks very similar to queue, HOWEVER:
+ * QUEUE: First In First Out (FIFO)
+ * STACK: First In Last Out (FILO)
+ * - Just a difference in order
+ * */
+
+class Stack {
+  constructor() {
+    this.data = [];
+  }
+
+  push(e) {
+    this.data.push(e);
+  }
+
+  pop() {
+    return this.data.pop();
+  }
+
+  peek() {
+    return this.data[this.data.length - 1];
+  }
+}
 
 module.exports = Stack;
